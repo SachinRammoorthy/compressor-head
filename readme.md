@@ -1,6 +1,6 @@
 # Compressor Head
 
-Compressor Head is a web application for compressing/scaling an image before downloading it.
+Compressor Head is a web application for compressing or scaling an image before downloading it.
 It is built on [Python](https://www.python.org) and hosted on the [Google App Engine](https://cloud.google.com/appengine).
 
 ## Why Compressor Head?
@@ -21,18 +21,18 @@ Running on the Google App Engine, the image conversion is nearly instantaneous. 
 
 ### <a id="usage"></a>Usage
 
-*URL* - ```
-http://compressor-head.appspot.com/image/?image_url=[IMAGE_URL]&width=[WIDTH]&height=[HEIGHT]&format=[FORMAT]```
+*URL* - 
+```http://compressor-head.appspot.com/image/?image_url=[IMAGE_URL]&width=[WIDTH]&height=[HEIGHT]&format=[FORMAT]```
 
 Where
 ```
-*IMAGE_URL* is the URL of the image which is to be compressed.
-*WIDTH* is the desired width.
-*HEIGHT* is the desired height.
-*FORMAT* is the desired image format (Supported formats - JPEG, PNG and WEBP).
+[IMAGE_URL] is the URL of the image which is to be compressed.
+[WIDTH] is the desired width.
+[HEIGHT] is the desired height.
+[FORMAT] is the desired image format (Supported formats - JPEG, PNG and WEBP).
 ```
 
-Both WIDTH and HEIGHT should be integers greater than or equal to 0:
+Both _Width_ and _Height_ should be integers greater than or equal to 0:
  * If *both are 0*, the image will not be scaled.
  * If *one of the two is 0*, it will scale that non-zero dimension and the other dimension will be scaled such that the aspect ratio remains the same.
  * If *both are greater than 0*, both the width and height will scale accordingly, which may change the aspect ratio of the image.
@@ -81,9 +81,9 @@ If you'd like to get more hands-on with the project, check out the following doc
  * [Vinay Sajip: logging](http://www.red-dove.com/python_logging.html)
  * [The Webapp2 Maintainers: webapp2](https://cloud.google.com/appengine/docs/standard/python/refdocs/google.appengine.api.images.html)
 
-### <a id="google_cloud"></a>Set up *Compressor-head* in Google Cloud Platform
+### <a id="google_cloud"></a>Set up *Compressor-Head* in Google Cloud Platform
 #### Steps to follow
-Before starting with steps you must have installed the lastest version of [Phyton](https://www.python.org/) on your local machine.
+Before starting with steps you must have installed the lastest version of [Python](https://www.python.org/) on your local machine.
 
 1. **Sign up** or **log in** to the [Google Cloud Platform Console](https://console.cloud.google.com). ***(important)***
 
@@ -91,7 +91,7 @@ Before starting with steps you must have installed the lastest version of [Phyto
 
     ![](https://image.ibb.co/bNyAu6/my_proj.png)
     ![](https://image.ibb.co/eZ6wZ6/add_proj.png)
-3. In the upper left corner, click on the three perpendicular lines ![](https://image.ibb.co/fZH3E6/three_perp.png), and then select API Manager.
+3. In the upper left corner, click on the hamburger menu (☰), and then select API Manager.
 4. In the Google Cloud APIs section, select Compute Engine API. 
 
 ![](https://image.ibb.co/iuxg1m/cloud_apis.png)
